@@ -7,8 +7,9 @@ const PORT = process.env.PORT || 8081;
 app.get('/', async (req, res) => {
     const verify_result = false;
     // const pwd_req = req.body['pwd'];
-    const user_req = req.query.username;
-    if(user_req === '!QAZ2wsx') {
+    // const user_req = req.query.username;
+    const user_req = '1';
+    if(user_req === '1') {
 	verify_result = true;
     } else { 
  	verify_result = false;
