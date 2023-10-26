@@ -3,23 +3,23 @@ const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 8081;
 
-export default function handler(req, res) {
-    var verify_result = false;
-    if(req.method === 'POST'){
-        const pwd_req = req.body['pwd'];
-        if(pwd_req === '!QAZ2wsx') {
-			verify_result = true;
-		} else { 
-			verify_result = false;
-		}
-	var res_data = {'verify_result': verify_result};
-    }
+// export default function handler(req, res) {
+//     var verify_result = false;
+//     if(req.method === 'POST'){
+//         const pwd_req = req.body['pwd'];
+//         if(pwd_req === '!QAZ2wsx') {
+// 			verify_result = true;
+// 		} else { 
+// 			verify_result = false;
+// 		}
+// 	var res_data = {'verify_result': verify_result};
+//     }
     
 
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.status(200).send(res_data);
+//     res.setHeader("Access-Control-Allow-Origin", "*");
+//     res.status(200).send(res_data);
     
-};
+// };
 
 app.get('/', async (req, res) => {
    const verify_result = false;
