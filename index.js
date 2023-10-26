@@ -34,6 +34,6 @@ app.post('/login', (req, res) => {
 	}
     var res_data = {'verify_result': verify_result};
     // return res.setHeader("Access-Control-Allow-Origin", "*");
-    // return res.status(200).send(res_data);
+    return res.status(200).send(res_data);
     return res.json({query: req.query, json: req.body, res_data: res_data})
 })
