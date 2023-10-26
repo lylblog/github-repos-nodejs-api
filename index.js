@@ -8,3 +8,8 @@ app.listen(8088, () => {
 app.get('/', (req, res) => {
     res.send('<div>hello world</div>')
 })
+
+
+app.post('/login', (req, res) => {
+    res.json('<div>hello login</div>')
+})
