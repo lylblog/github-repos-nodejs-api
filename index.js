@@ -26,14 +26,14 @@ app.listen(8088, () => {
 
 // 访问方式：https://api-lp3d.onrender.com/login?id=2&pwd=!QAZ2wsx
 app.post('/login', (req, res) => {
-    const pwd_req = req.body['pwd'];
-    if(pwd_req === '!QAZ2wsx') {
-		verify_result = true;
-	} else { 
-		verify_result = false;
-	}
-    var res_data = {'verify_result': verify_result};
-    return res.setHeader("Access-Control-Allow-Origin", "*");
-    return res.status(200).send(res_data);
+ //    const pwd_req = req.body['pwd'];
+ //    if(pwd_req === '!QAZ2wsx') {
+	// 	verify_result = true;
+	// } else { 
+	// 	verify_result = false;
+	// }
+ //    var res_data = {'verify_result': verify_result};
+    // return res.setHeader("Access-Control-Allow-Origin", "*");
+    // return res.status(200).send(res_data);
     return res.json({query: req.query, json: req.body})
 })
