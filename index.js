@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 // 解析参数
 const bodyParser = require('body-parser')
-let login = true;
+
 // json请求
 app.use(bodyParser.json())
 // 表单请求
@@ -13,11 +13,14 @@ app.listen(8088, () => {
 
 
 //如果未登录，返回未登录，否则，继续向下匹配，回调函数接收三个参数，最后一个是next,继续向下执行，路径一定要写在最上面，不然会先被test捕捉到，test没有执行next,就会捕捉不到请求。
-app.all('*', (req, res, next) => {
-    if(!login) return res.json('未登录')
-    next()
-})
-app.post('/test:data', (req, res) => {
+// let login = true;
+// app.all('*', (req, res, next) => {
+//     if(!login) return res.json('未登录')
+//     next()
+// })
+
+
+app.post('/login:data', (req, res) => {
     return res.json({query: req.query, data: req.params, json: req.body})
 })
 
