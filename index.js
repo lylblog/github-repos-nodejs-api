@@ -20,8 +20,11 @@ app.listen(8088, () => {
 // })
 
 
-app.post('/login:data', (req, res) => {
+app.post('/login', (req, res) => {
     return res.json({query: req.query, data: req.params, json: req.body})
 })
+// app.post('/login:data', (req, res) => {
+//     return res.json({query: req.query, data: req.params, json: req.body})
+// })
 
 
