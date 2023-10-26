@@ -19,12 +19,12 @@ app.listen(8088, () => {
 //     next()
 // })
 
-
-app.post('/login', (req, res) => {
-    return res.json({query: req.query, data: req.params, json: req.body})
-})
+// 访问方式：https://api-lp3d.onrender.com/login:data?id=2&pwd=!QAZ2wsx
 // app.post('/login:data', (req, res) => {
 //     return res.json({query: req.query, data: req.params, json: req.body})
 // })
 
-
+// 访问方式：https://api-lp3d.onrender.com/login?id=2&pwd=!QAZ2wsx
+app.post('/login', (req, res) => {
+    return res.json({query: req.query})
+})
